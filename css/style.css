@@ -1,0 +1,749 @@
+@font-face {
+  font-family: "SloopScript";
+  src: url("../fonts/Sloop-ScriptThree.ttf") format("woff2"),
+       url("../fonts/Sloop-ScriptThree.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================================================
+    SECCIÓN HERO
+   ========================================================= */
+#inicio {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin-bottom: 200px;
+}
+
+/* -------------------- CAPAS ----------------------- */
+.layer {
+    position: relative;
+    isolation: isolate;
+}
+
+.layer-bolso {
+    z-index: 2;
+    width: 100%;
+}
+
+.layer-objetos {
+    z-index: 1;
+    width: 100%;
+}
+
+.layer-menu {
+    z-index: 3;
+    width: 100%;
+}
+
+/* ---------------------- BOLSO ------------------------ */
+.bolso {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+}
+
+.bolso img {
+    width: 100%;
+    display: block;
+    height: auto;
+    max-width: 1200px;
+}
+
+/* ---------------------- OBJETOS ------------------------ */
+.objetos {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+    top: -750px;
+}
+
+.obj {
+    position: absolute;
+    transform-origin: center;
+    display: block;
+    height: auto;
+    transition:
+        top 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* ---- individuales ----- */
+.milan {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 38px 20px -5px rgba(0, 0, 0, 0.25);
+    top: 17%;
+    left: 7%;
+    transform: rotate(-85deg);
+}
+
+.siargao {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.25);
+    top: 19%;
+    left: 4%;
+    transform: rotate(103deg);
+}
+
+.gafas {
+    width: 450px;
+    top: 20%;
+    left: 30%;
+    transform: rotate(80deg);
+}
+
+.gloss {
+    width: 350px;
+    top: 17%;
+    left: 65%;
+    transform: rotate(160deg);
+}
+
+.airpods {
+    width: 200px;
+    top: 23%;
+    left: 58%;
+    transform: rotate(10deg);
+}
+
+/* -------------------- OBJETOS MENÚ ---------------------- */
+
+.objmenu {
+    position: absolute;
+    width: 100%;
+    top: -275px;
+}
+
+.llaves {
+    width: 300px;
+    left: 3%;
+    transform: rotate(13deg);
+    z-index: 5;
+}
+
+.llaves:hover {
+    transform: rotate(15deg)
+}
+
+.acreditacion {
+    width: 100%;
+    display: block;
+}
+
+.acreditacion-wrap {
+    position: absolute;
+    top: 18%;
+    left: 11%;
+    width: 475px;
+    display: block;
+}
+
+
+.acreditacion-wrap:hover .acreditacion {
+    content: url("../img/acreditacion.png");
+}
+
+
+/* WALLET */
+.contenedorwallet {
+    position: absolute;
+    width: 350px;
+    height: fit-content;
+    left: 48%;
+    transform: rotate(-7deg);
+}
+
+.wallet {
+    position: absolute;
+    width: 350px;
+    transform: rotate(-7deg);
+}
+
+.wallet-img {
+    position: absolute;
+    width: 290px;
+    transform-origin: bottom left;
+    top: 65px;
+    left: 35px;
+    transform: rotate(-7deg);
+    z-index: -1;
+    border-radius: 12px;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    box-shadow: 10px 38px 20px -5px rgba(0, 0, 0, 0.25);
+}
+
+.contenedorwallet:hover .tarjeta1 {
+    transform: rotate(3deg) translateX(8px);
+}
+
+.contenedorwallet:hover .tarjeta2 {
+    transform: rotate(13deg) translateX(-8px);
+}
+
+/* MÓVIL */
+.movil {
+    width: 200px;
+    left: 79%;
+    top: 80px;
+    transform: rotate(8deg);
+    z-index: 5;
+    position: absolute;
+    pointer-events: auto;
+}
+
+.movil:hover {
+    animation: vibrar 0.3s linear 2;
+}
+
+@keyframes vibrar {
+    0% {
+        transform: rotate(10deg) translate(0, 0);
+    }
+    20% {
+        transform: rotate(11deg) translate(0, 0);
+    }
+    40% {
+        transform: rotate(9deg) translate(0, 0);
+    }
+    60% {
+        transform: rotate(11deg) translate(0, 0);
+    }
+    100% {
+        transform: rotate(10deg) translate(0, 0);
+    }
+}
+
+
+/* =========================================================
+   SECCIÓN DE PRESENTACIÓN 
+========================================================= */ 
+#intro {
+    width: 100%;
+    height: 60vh;
+    
+    padding: 100px 50px;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    font-family: sans-serif;
+}
+
+.puesto {
+    position: relative;
+    padding-bottom: 20px;
+    color: #333;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    letter-spacing: -0.5px;
+    transform: translateY(10px);
+}
+
+.desp {
+    font-size: 18px;
+    color: #555;
+    text-indent: 2rem;
+    text-align: justify;
+    position: relative;
+}
+
+.desp::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 50px;
+    height: 1.5px;
+    background: #000;
+    opacity: 0.2;
+}
+
+
+/* =========================================================
+   SECCIÓN DE PROYECTOS 
+========================================================= */
+
+#proyectos {
+  width: 100%;
+    height: 100%;
+  position: relative;
+  padding: 100px 50px;
+  box-sizing: border-box;
+}
+
+.project {
+    width: 100%;
+    
+    font-size: 225px;
+    font-family: SloopScript;
+    font-weight: 100;
+    color: #393838;
+    text-align: center;
+}
+
+.galeria {
+    width: 100%;
+    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  justify-items: center;
+}
+
+.tarjeta {
+  border-radius: 13px;
+  overflow: hidden;
+  width: 100%;
+
+  aspect-ratio: 1 / 0.632;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Contenedor del botón */
+.explorar {
+  display: flex;
+  justify-content: flex-end; /* empuja el botón a la derecha */
+  margin-top: 1rem;          /* separación respecto a la galería */
+}
+
+.btn-explorar {
+  font-family: "Pixelify Sans", monospace;
+  font-size: 16px;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.6;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: fit-content;     /* no se estire más de lo que ocupa el texto */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn-explorar:hover {
+  opacity: 1;
+}
+
+/* =========================================================
+   SOBRE MÍ · SLIDER CENTRAL
+========================================================= */
+
+#sobremi {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+    overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- FLECHAS ---------- */
+
+.arrow {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #414141;
+  z-index: 10;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow.left {
+  left: 40px;
+}
+
+.arrow.right {
+  right: 40px;
+}
+
+/* ---------- SLIDER ---------- */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- SLIDES ---------- */
+
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform-origin: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* ESTADO CENTRAL */
+.slide.active {
+  transform: translate(-50%, -45%) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* ESTADO IZQUIERDA */
+.slide.left {
+  transform: translate(-110%, -45%) scale(0.75);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+/* ESTADO DERECHA */
+.slide.right {
+  transform: translate(10%, -45%) scale(0.75);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+/* =========================================================
+   CONTENIDO INTERNO (TU CSS ADAPTADO)
+========================================================= */
+
+#sobremi {
+    margin-bottom: 200px;
+}
+
+.skills,
+.idiomas,
+.programacnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SKILLS */
+.skills img {
+  width: 380px;
+    transform: rotate(-2deg);
+}
+
+/* IDIOMAS */
+.idiomas {
+  gap: 10px;
+}
+
+.cascos {
+  width: 325px;
+  height: 60px;
+  object-fit: cover;
+    overflow: visible;
+  position: relative;
+}
+
+.idioma {
+  width: 260px;
+}
+
+/* PROGRAMAS */
+.programatxt {
+  font-family: "Pixelify Sans", monospace;
+  font-size: 30px;
+  color: #414141;
+  padding-bottom: 40px;
+}
+
+.programas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+    transition: transform 0.25s ease;
+}
+
+.programas img {
+  width: 100px;
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+.programas:hover img {
+  opacity: 0.7;
+}
+
+.programas img:hover {
+  transform: scale(1.08) translateY(-2px);
+      opacity: 1;
+}
+
+
+/* =========================================================
+   SECCIÓN DE CONTACTO
+========================================================= */ 
+#contacto {
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    width: 400px;
+    padding: 10px 25px;
+    align-items: center;
+}
+
+.cv {
+  font-size: 60px;
+  font-family: "Pixelify Sans", sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-weight: 100;
+
+  position: relative;
+  align-items: center;
+}
+
+.cv-line {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  width: 0%;
+  background: #333;
+  transition: width 0.1s linear;
+}
+
+.cv-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.email {
+  font-size: 35px;
+  font-family: SloopScript;
+  text-decoration: none;
+  color: #333;
+    z-index: 3;
+}
+
+.vertical-email {
+  position: absolute;
+  left: 35%; /* justo a la izquierda del form */
+  top: 70%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: left top;
+  white-space: nowrap;
+}
+
+.rrss {
+    width: 400px;
+  height: 150px;
+    
+    padding: 10px;
+    
+  display: flex;
+  flex-direction: column;
+    
+  justify-content: space-between;
+  text-align: end;
+}
+
+.redes {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+    
+  color: grey;
+  text-decoration: none;
+    
+  transition: font-size 0.3s ease, font-family 0.3s ease;
+}
+
+.redes:hover {
+  font-family: "SloopScript", serif;
+  font-size: 40px;
+}
+
+/* Contenedor del formulario */
+#contacto-form {
+  max-width: 400px;
+
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Labels */
+#contacto-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs y textarea */
+#contacto-form input,
+#contacto-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto al enfocarse */
+#contacto-form input:focus,
+#contacto-form textarea:focus {
+  border-color: #333; 
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Botón */
+#contacto-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contacto-form button:hover {
+  background-color: #292929;
+}
+
+/* Mensajes de éxito/error */
+#form-success, #form-error {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+
+/* Contenedor del formulario */
+#contacto-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+
+/* Floating labels */
+#contacto-form label {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: #888;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  background: #fff;
+  padding: 0 4px;
+}
+
+/* Inputs y textarea */
+#contacto-form input,
+#contacto-form textarea {
+  width: 100%;
+  padding: 14px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Cuando el input está enfocado o tiene valor */
+#contacto-form input:focus + label,
+#contacto-form input:not(:placeholder-shown) + label,
+#contacto-form textarea:focus + label,
+#contacto-form textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Efecto al enfocar */
+#contacto-form input:focus,
+#contacto-form textarea:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Botón */
+#contacto-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#contacto-form button:hover {
+  background-color: #292929;
+  transform: scale(1.05);
+}
+
+/* Mensajes de éxito/error animados */
+#form-success, #form-error {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+#form-success.show, #form-error.show {
+  opacity: 1;
+}
+

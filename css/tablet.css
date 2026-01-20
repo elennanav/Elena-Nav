@@ -1,0 +1,88 @@
+@media (max-width: 1024px) {
+
+  #inicio {
+    margin-bottom: 45%;
+      transform: scale(0.9);
+    transform-origin: top center;
+  }
+    
+
+  .objetos {
+    top: -650px;
+  }
+
+  .milan,
+  .siargao {
+    width: 35%;
+  }
+
+  .gafas {
+    width: 30%;
+    left: 33%;
+  }
+
+  .gloss {
+    width: 23%;
+  }
+
+  .airpods {
+    width: 14%;
+  }
+
+  .objmenu {
+    top: -100px;
+  }
+    
+.llaves {
+    width: 33%;
+    top: -20px;
+    left: 0;
+}
+
+.acreditacion {
+    width: 95%;
+    top: -35px;
+}    
+    
+.contenedorwallet {
+    width: 20%;
+    top: -150px;
+}    
+    
+  .movil {
+    width: 20%;
+      left: 75%;
+  }
+
+/*intro--------------------------------------------------*/ 
+    
+#intro {
+    height: 45vh;
+}    
+/*proyectos--------------------------------------------------*/        
+
+    #proyectos {
+        height: auto;
+}
+    
+  .project {
+font-size: clamp(72px, 18vw, 200px);
+    }
+
+/*sobremi--------------------------------------------------*/    
+    
+    
+  .slide {
+    width: 80%;
+  }
+
+  .skills img {
+    width: 500px;
+  }
+
+}
+
+body {
+  overflow-x: hidden;
+}
+    

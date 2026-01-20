@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Proyectos</title>
+        <link rel="stylesheet" href="css/proyectos.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+       
+    <!---------------------------------- MENÚ -------------------------------->
+    <a href="index.html#proyectos" class="back">Back</a>
+
+
+       <!-- Menú de filtros -->
+               <section id="proyectos">
+        <div class="filtros">
+            <button data-filter="todos" class="activo">Todos</button>
+            <button data-filter="pintura">Pintura</button>
+            <button data-filter="fotografia">Fotografía</button>
+            <button data-filter="diseno">Diseño</button>
+            <button data-filter="direccion">Dirección de Arte</button>
+            <button data-filter="grafica">Gráfica</button>
+            <button data-filter="web">Página web</button>
+            <button data-filter="ilustracion">Ilustración</button>
+            <button data-filter="editorial">Editorial</button>
+            <button data-filter="otros">Otros</button>
+        </div>
+
+        <div id="tarjetas" class="galeria">
+            <div class="tarjeta" data-category="diseno grafica direccion fotografia" data-orden="1">
+                <a href="proyectos/Lomaximo.html">
+                    <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/lomaximo.png&quot;)"></div
+                ></a>
+            </div>
+
+            <div class="tarjeta" data-category="diseno direccion fotografia editorial" data-orden="4">
+                <a href="proyectos/lessencia.html"
+                    ><div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/essencia.png&quot;)"></div
+                ></a>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="otros" data-orden="12">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/tul.png&quot;)"></div>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="pintura" data-orden="10">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/quad.png&quot;)"></div>
+            </div>
+
+            <div class="tarjeta" data-category="diseno web fotografia otros direccion" data-orden="2">
+                <a href="proyectos/mm.html">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/mm.png&quot;)"></div></a>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="grafica fotografia editorial diseno ilustracion" data-orden="11">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/yeguada.png&quot;)"></div>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="ilustracion" data-orden="7">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/amparo.png&quot;)"></div>
+                <div class="overlay-bloqueado">Próximamente</div>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="diseno editorial ilustracion fotografia" data-orden="6">
+                <a href="proyectos/sesgo.html"><div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/sesgo.png&quot;)"></div>
+                </a>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="fotografia" data-orden="9">
+                <a href="proyectos/Akerselva.html">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/akerselva.png&quot;)"></div></a>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="pintura" data-orden="8">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/tinajas.png&quot;)"></div>
+
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="diseno direccion" data-orden="5">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/101citas.png&quot;)"></div>
+                <div class="overlay-bloqueado">Próximamente</div>
+            </div>
+
+            <div class="tarjeta bloqueado" data-category="grafica direccion fotografia diseno ilustracion otros" data-orden="3">
+                <a href="proyectos/hiloylibro.html">
+                <div class="tarjeta-fondo" style="background-image: url(&quot;img/proyecto/hilo.png&quot;)"></div></a>
+            </div>
+        </div>
+        </section>
+
+        <script src="js/proyectos.js"></script>
+    </body>
+</html>

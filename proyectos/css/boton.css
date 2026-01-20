@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boton-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #bfe6ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* Ajuste de la imagen dentro del botón */
+.boton-home .icono-home {
+    width: 49px;  /* ajusta según el tamaño visual que quieras */
+    height: 49px;
+    object-fit: contain; /* mantiene proporciones */
+}
+
+/* efecto hover */
+.boton-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #e60028;
+}
+
+/* opcional: cambia el color del icono en hover si es SVG */
+.boton-home:hover .icono-home {
+    filter: brightness(0) invert(1); /* icono blanco sobre fondo rosa */
+}

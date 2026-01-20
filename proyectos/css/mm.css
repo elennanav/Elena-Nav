@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Qaila';
+    src: url('../../fonts/Qaila.otf') format("opentype");
+    font-weight: normal;
+  font-style: normal;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mm/fondo.png);
+    background-size: cover;       /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    
+      display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+.logo {
+   width: 70%;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    background-color: #f8f4f1;
+}
+
+.statement {
+    width: 60%;
+    padding: 20px;
+    margin-right: 40px; /* 🔹 Añade este espacio */
+}
+
+
+.statement h1{
+    font-size: 62px;
+    font-family: Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 1.2;
+}
+
+/* Contenedor general del bloque de enlaces */
+.memorias {
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    background-image: url('../img/mm/links.jpg'); /* cambia esto */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Columna con los dos botones */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 60px; /* 🔹 Baja los botones */
+}
+
+
+/* Botones ovalados */
+.btn-oval {
+    padding: 15px 30px;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.66);
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+
+    border: 1px solid rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+
+    transition: 0.3s ease;
+}
+
+.btn-oval:hover {
+    background-color: #f8f4f1;
+    transform: translateY(-3px);
+}
+
+/*sección dispositivos*/
+
+.dispositivos {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.movil {
+    width: 25%;
+}
+
+.ipad {
+    width: 30%;
+}
+
+.portatil {
+    width: 40%;    
+}
+
+
+.mockup img{
+    width: 100%;
+}
+
+.web {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vídeo de fondo */
+.web-video {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    object-fit: cover;
+    border-radius: 10px; /* opcional, queda precioso */
+    z-index: 1;
+}
+
+
+/* Botón sobre el vídeo */
+.web-btn {
+    z-index: 2;  /* Hace que el botón quede por encima del vídeo */
+    margin-top: 200px; /* 🔹 Ajusta esta cantidad a tu gusto */
+}
+
+.diseno {
+   width: 100%;
+    height: 105vh;
+    padding: 0;
+}
+
+.palette {
+    position: relative;
+    width: 40%;
+}
+
+/* Base común */
+.color {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.8rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transform-origin: center;
+}
+
+/* Hover elegante */
+.color:hover {
+    transform: scale(1.04);
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09);
+}
+
+/* Posiciones EXACTAS */
+
+/* Top */
+.c1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: #F5B063;
+        color: #f8f4f1;
+}
+
+/* Centro izquierdo */
+.c2 {
+    top: 20%;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    background: #BFC4C6;
+        color: #f8f4f1;
+}
+
+/* Centro derecho arriba */
+.c3 {
+    top: 20%;
+    left: 40%;
+    width: 60%;
+    height: 25%;
+    background: #f8f4f1;
+    color: #393838;
+}
+
+/* Centro derecho abajo */
+.c4 {
+    top: 45%;
+    left: 40%;
+    width: 60%;
+    height: 25%;
+    background: #0A24D6;
+    color: #f8f4f1;
+}
+
+/* Bottom izquierdo */
+.c5 {
+    top: 70%;
+    left: 0;
+    width: 70%;
+    height: 30%;
+    background: #FFFFA3;
+        color: #0A24D6;
+}
+
+/* Bottom derecho */
+.c6 {
+    top: 70%;
+    left: 70%;
+    width: 30%;
+    height: 30%;
+    background: #393838;
+    color: #f8f4f1;
+}
+
+
+.color p {
+    margin: 8px 8px;
+    font-family: Helvetica, sans-serif;
+}
+
+.color .code {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Lado derecho: tipografías */
+.fonts {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.font-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+}
+
+.font-block:last-child {
+    border-bottom: none;
+}
+
+.qaila {
+    font-size: 40px;
+    font-family: Qaila;
+    font-weight: bold;
+    color: #393838;
+    margin-bottom: 5px;
+}
+
+.helvetica {
+    font-size: 25px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    color: #393838;
+    margin-bottom: 5px;
+}
+
+.caligrafia {
+    width: 500px;
+}
+
+.type {
+    white-space: nowrap;
+}
+
+
+.font-sample {
+    font-size: 16px;
+    font-style: italic;
+    
+    color: #bfc4c6;
+}
+
+.galeriamm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* espacio entre imágenes */
+    justify-content: space-between;
+}
+
+.galeriamm img {
+    height: 200px; /* altura fija por fila */
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 10px;
+    flex-basis: auto; /* permite que se ajusten proporcionalmente */
+    object-fit: cover; /* recorta sin deformar */
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* RESET DE ALTURAS */
+  section {
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+  }
+
+  .logo {
+    width: 85%;
+  }
+
+  /* MEMORIA */
+
+  .memoria {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .statement {
+    width: 100%;
+    min-height: 90vh;           /* casi todo el viewport */
+    display: flex;
+    align-items: center;        /* centra verticalmente el texto */
+    padding: 10px 2px;
+  }
+
+.statement h1 {
+    font-size: 50px;
+    line-height: 1.35;
+    text-align: justify;
+
+    /* permite cortar todas las palabras si hace falta */
+    word-break: break-all;       /* rompe todas las palabras necesarias */
+    overflow-wrap: break-word;   /* soporte extra para navegadores */
+    hyphens: auto;               /* sílabas cuando sea posible */
+}
+
+    
+  .memorias {
+    width: 100%;
+     order: 2;
+    margin-top: 30px;
+    height: 70vh;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .links {
+    width: 100%;
+    padding-top: 0;
+    gap: 16px;
+  }
+
+  .btn-oval {
+    font-size: 18px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+
+  /* DISPOSITIVOS */
+
+  .dispositivos {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .movil {
+    width: 65%;
+  }
+
+  .ipad {
+    width: 75%;
+  }
+
+  .portatil {
+    width: 90%;
+  }
+
+  /* WEB */
+  .web {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .web-video {
+    position: relative;
+    inset: auto;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    background-color: #f8f4f1;
+    border-radius: 12px;
+  }
+
+  .web-btn {
+    margin-top: 30px;
+  }
+
+
+  /* DISEÑO */
+  .diseno {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  /* PALETA */
+  .palette {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .color p {
+    font-size: 0.75rem;
+  }
+
+  /* FONTS */
+  .fonts {
+    width: 100%;
+  }
+
+  .font-block {
+    padding: 30px 20px;
+  }
+
+  .qaila {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .helvetica {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .caligrafia {
+    width: 90%;
+  }
+
+  /* GALERÍA */
+  .fotografia {
+    padding: 20px;
+  }
+
+  .galeriamm {
+    gap: 6px;
+  }
+
+  .galeriamm img {
+    height: 150px;
+    border-radius: 8px;
+  }
+
+  /* BOTÓN HOME */
+  .boton-home {
+    bottom: 20px;
+    right: 20px;
+  }
+}
